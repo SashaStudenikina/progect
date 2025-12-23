@@ -11,78 +11,16 @@
     <script src="jquery-3.4.1.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <script type="text/javascript" src="slick.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Проект WEB</title>
-</head>
-<body>
-    <title>Проект WEB</title>
-    <style>
-        /* Дополнительные стили для решения проблемы с кликабельностью */
-        header#head {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header#head video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-        
-        .header_back_img {
-            position: absolute;
-            z-index: 2;
-        }
-        
-        .container {
-            position: relative;
-            z-index: 3;
-        }
-        
-        /* Убедимся, что все интерактивные элементы кликабельны */
-        .header_tarif_button,
-        .tarif_button,
-        .team_button,
-        button,
-        a,
-        input,
-        textarea,
-        .menu li,
-        .socials a {
-            position: relative;
-            z-index: 10;
-            cursor: pointer;
-        }
-        
-        /* Улучшение видимости меню */
-        .menus {
-            position: relative;
-            z-index: 100;
-        }
-        
-        /* Для формы */
-        #form_send {
-            position: relative;
-            z-index: 10;
-        }
-        
-        /* Скрыть якоря при плавном скролле */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 <body>
 
     <!-- 1 -->
 
     <header id="head">
-        <video autoplay loop muted playsinline>
+        <video autoplay loop muted>
             <source src="video.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
         </video>
         <img src="druplicon.svg" class="header_back_img" alt="">
         <div class="container">
@@ -99,30 +37,30 @@
         
                 <nav>
                     <ul class="menu">
-                        <li><a href="#services">ПОДДЕРЖКА DRUPAL</a></li>
+                        <li><a href="">ПОДДЕРЖКА DRUPAL</a></li>
                         <li class="menu_podcat">
-                            <span><a href="#supports">АДМИНИСТРИРОВАНИЕ</a></span>
+                            <span><a href="">АДМИНИСТРИРОВАНИЕ</a></span>
                             <ul>
-                                <li><a href="#tasks">МИГРАЦИЯ</a></li>
-                                <li><a href="#form">БЭКАПЫ</a></li>
-                                <li><a href="#FAQ">АУДИТ БЕЗОПАСНОСТИ</a></li>
-                                <li><a href="#tasks">ОПТИМИЗАЦИЯ СКОРОСТИ</a></li>
-                                <li><a href="#form">ПЕРЕЕЗД НА HTTPS</a></li>
+                                <li><a href="">МИГРАЦИЯ</a></li>
+                                <li><a href="">БЭКАПЫ</a></li>
+                                <li><a href="">АУДИТ БЕЗОПАСНОСТИ</a></li>
+                                <li><a href="">ОПТИМИЗАЦИЯ СКОРОСТИ</a></li>
+                                <li><a href="">ПЕРЕЕЗД НА HTTPS</a></li>
                             </ul>
                         </li>
-                        <li><a href="#team">ПРОДВИЖЕНИЕ</a></li>
-                        <li><a href="#cases">РЕКЛАМА</a></li>
+                        <li><a href="">ПРОДВИЖЕНИЕ</a></li>
+                        <li><a href="">РЕКЛАМА</a></li>
                         <li class="menu_podcat">
-                            <span><a href="#about">О НАС</a></span>
+                            <span><a href="">О НАС</a></span>
                             <ul>
-                                <li><a href="#team">КОМАНДА</a></li>
-                                <li><a href="#reviews">DRUPALGIVE</a></li>
-                                <li><a href="#cases">БЛОГ</a></li>
-                                <li><a href="#form">КУРСЫ DRUPAL</a></li>
+                                <li><a href="">КОМАНДА</a></li>
+                                <li><a href="">DRUPALGIVE</a></li>
+                                <li><a href="">БЛОГ</a></li>
+                                <li><a href="">КУРСЫ DRUPAL</a></li>
                             </ul>
                         </li>
-                        <li><a href="#cases">ПРОЕКТЫ</a></li>
-                        <li><a href="#form">КОНТАКТЫ</a></li>
+                        <li><a href="">ПРОЕКТЫ</a></li>
+                        <li><a href="">КОНТАКТЫ</a></li>
                     </ul>
                 </nav>
             </div>
@@ -131,7 +69,7 @@
                 <div>
                     <h1>Поддержка<br> сайтов на Drupal</h1>
                     <h2>Сопровождение и поддержка сайтов<br>на CMS Drupal любых версий и запущенности</h2>
-                    <a href="#tarif" class="header_tarif_button">ТАРИФЫ</a>
+                    <button class="header_tarif_button">ТАРИФЫ</button>
                 </div>
                 <div class="header_categories">
                     <div>
@@ -307,6 +245,7 @@
         </section>
 
         <!-- 4 -->
+
         <section id="expertise">
             <div class="container">
                 <h1>Экспертиза в Drupal,<br> опыт 14 лет!</h1>
@@ -329,61 +268,65 @@
             <img src="druplicon1.svg" class="expertise_back_img" alt="">
             <img src="laptop.png" class="expertise_laptop" alt="">
         </section>
+
         <!-- 5 -->
-          <div class="container">
-    <h1>Тарифы</h1>
-    
-    <div class="tarif_categories">
-        <div class="tarif_category">
-            <div class="tarif_title">Стартовый</div>
-            <div class="tarif_price">2000<div>₽</div></div>
-            <div class="tarif_podprise">в час</div>
-            <hr>
-            <div class="tarif_items">
-                <div class="tarif_item">Консультации и работы по SEO</div>
-                <div class="tarif_item">Услуги дизайнера</div>
-                <div class="tarif_item">Неиспользованные оплаченные часы переносятся на следующий месяц</div>
-                <div class="tarif_item">Предоплата от 6 000 рублей в месяц</div>
-            </div>
-            <a href="#form" class="tarif_button">СВЯЖИТЕСЬ С НАМИ!</a>
-        </div>
+        
+            <div class="container">
+                <h1>Тарифы</h1>
+                
+                <div class="tarif_categories">
+                    <div class="tarif_category">
+                        <div class="tarif_title">Стартовый</div>
+                        <div class="tarif_price">2000<div>₽</div></div>
+                        <div class="tarif_podprise">в час</div>
+                        <hr>
+                        <div class="tarif_items">
+                            <div class="tarif_item">Консультации и работы по SEO</div>
+                            <div class="tarif_item">Услуги дизайнера</div>
+                            <div class="tarif_item">Неиспользованные оплаченные часы переносятся на следующий месяц</div>
+                            <div class="tarif_item">Предоплата от 6 000 рублей в месяц</div>
+                        </div>
+                        <button class="tarif_button">СВЯЖИТЕСЬ С НАМИ!</button>
+                    </div>
 
-        <div class="tarif_category active">
-            <div class="tarif_title">Бизнес</div>
-            <div class="tarif_price">2000<div>₽</div></div>
-            <div class="tarif_podprise">в час</div>
-            <hr>
-            <div class="tarif_items">
-                <div class="tarif_item">Консультации и работы по SEO</div>
-                <div class="tarif_item">Услуги дизайнера</div>
-                <div class="tarif_item">Высокое время реакции – до 2 рабочих дней</div>
-                <div class="tarif_item">Неиспользованные оплаченные часы не переносятся</div>
-                <div class="tarif_item">Предоплата от 30 000 рублей в месяц</div>
-            </div>
-            <a href="#form" class="tarif_button button_select">СВЯЖИТЕСЬ С НАМИ!</a>
-        </div>
+                    <div class="tarif_category active">
+                        <div class="tarif_title">Бизнес</div>
+                        <div class="tarif_price">2000<div>₽</div></div>
+                        <div class="tarif_podprise">в час</div>
+                        <hr>
+                        <div class="tarif_items">
+                            <div class="tarif_item">Консультации и работы по SEO</div>
+                            <div class="tarif_item">Услуги дизайнера</div>
+                            <div class="tarif_item">Высокое время реакции – до 2 рабочих дней</div>
+                            <div class="tarif_item">Неиспользованные оплаченные часы не переносятся</div>
+                            <div class="tarif_item">Предоплата от 30 000 рублей в месяц</div>
+                        </div>
+                        <button class="tarif_button button_select">СВЯЖИТЕСЬ С НАМИ!</button>
+                    </div>
 
-        <div class="tarif_category">
-            <div class="tarif_title">VIP</div>
-            <div class="tarif_price">1800<div>₽</div></div>
-            <div class="tarif_podprise">в час</div>
-            <hr>
-            <div class="tarif_items">
-                <div class="tarif_item">Консультации и работы по SEO</div>
-                <div class="tarif_item">Услуги дизайнера</div>
-                <div class="tarif_item">Максимальное время реакции – в день обращения</div>
-                <div class="tarif_item">Неиспользованные оплаченные часы не переносятся</div>
-                <div class="tarif_item">Предоплата от 270 000 рублей в месяц</div>
-            </div>
-            <a href="#form" class="tarif_button">СВЯЖИТЕСЬ С НАМИ!</a>
-        </div>
-    </div>
+                    <div class="tarif_category">
+                        <div class="tarif_title">VIP</div>
+                        <div class="tarif_price">1800<div>₽</div></div>
+                        <div class="tarif_podprise">в час</div>
+                        <hr>
+                        <div class="tarif_items">
+                            <div class="tarif_item">Консультации и работы по SEO</div>
+                            <div class="tarif_item">Услуги дизайнера</div>
+                            <div class="tarif_item">Максимальное время реакции – в день обращения</div>
+                            <div class="tarif_item">Неиспользованные оплаченные часы не переносятся</div>
+                            <div class="tarif_item">Предоплата от 270 000 рублей в месяц</div>
+                        </div>
+                        <button class="tarif_button">СВЯЖИТЕСЬ С НАМИ!</button>
+                    </div>
+                </div>
 
-    <div class="tarif_info subtitle">Вам не подходят наши тарифы? Оставьте заявку и мы<br> предложим вам индивидуальные условия!</div>
-    <div class="tarif_individual">
-        <a href="#form" class="podzag">Получить индивидуальный тариф</a>
-    </div>
-</div>
+                <div class="tarif_info subtitle">Вам не подходят наши тарифы? Оставьте заявку и мы<br> предложим вам индивидуальные условия!</div>
+                <div class="tarif_individual">
+                    <a class="podzag">Получить индивидуальный тариф</a>
+                </div>
+            </div>
+        </section>
+
         <!-- 6 -->
 
         <section id="tasks">
@@ -394,7 +337,7 @@
                         <div class="tasks_part_sor">
                             <div class="tasks_imgs">
                                 <img src="servicesback.svg" alt="">
-                                <img src="services9.svg" alt="">
+                                <img src="tasks1.svg" alt="">
                             </div>
                             <h1>от 1ч</h1>
                             <div class="podzag1">Настройка события GA в<br>интернет-магазине</div>
@@ -404,7 +347,7 @@
                         <div class="tasks_part_sor">
                             <div class="tasks_imgs">
                                 <img src="servicesback.svg" alt="">
-                                <img src="services10.svg" alt="">
+                                <img src="tasks2.svg" alt="">
                             </div>
                             <h1>от 20ч</h1>
                             <div class="podzag1">Разработка мобильной<br>версии сайта</div>
@@ -414,7 +357,7 @@
                         <div class="tasks_part_sor">
                             <div class="tasks_imgs">
                                 <img src="servicesback.svg" alt="">
-                                <img src="services11.svg" alt="">
+                                <img src="tasks3.svg" alt="">
                             </div>
                             <h1>от 8ч</h1>
                             <div class="podzag1">Интеграция модуля<br>оплаты</div>
@@ -466,7 +409,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#team" class="team_button">Вся команда</a>
+                <button class="team_button">Вся команда</button>
             </div>
         </section>
 
@@ -568,534 +511,259 @@
             </div>
         </section>
 
-<!-- 9. reviews -->
-<section id="reviews">              
-    <div class="container">
-        <h1>Отзывы</h1>
-        <div class="txts">
-            <div class="review_bg"></div>
-            <div class="review-container">
-                <div class="review-slider">
-                    <!-- Отзыв 1 -->
-                    <div class="review-item active">
-                        <div class="review-header">
-                            <img src="review2.png" alt="Отзыв Натальи Сушковой" class="review-logo" />
-                            <div class="review-title">
-                                <div class="review-company">CIEL</div>
-                                <div class="review-website">p a r f u m</div>
-                            </div>
-                        </div>
-                        <div class="slidertext_text">
-                            <strong>Долгие поиски единственного и неповторимого мастера на многострадальный сайт www.cielparfum.com, который был собран крайне некомпетентным программистом и раз в месяц стабильно грозил погибнуть, привели меня на сайт и, в итоге, к ребятам из Drupal-coder. И вот уже практически полгода как не проходит и дня, чтобы я не поудивлялась и не порадовалась своему везению! Починили все, что не работало - от поиска до отображения меню. Провели редизайн - не отходя от желаемого, но со своими существенными и качественными дополнениями. Осуществили ряд проектов - конкурсы, тесты и тд. А уж мелких починок и доработок - не счесть! И главное - все качественно и быстро (не взирая на не самый "быстрый" тариф). Есть вопросы - замечательный Алексей всегда подскажет, поддержит, отремонтирует и/или просто сделает с нуля. Есть задумка для реализации - замечательный Сергей обсудит и предложит идеальный вариант. Есть проблема - замечательные Надежда и Роман починят, поправят, сделают! Ребята доказали, что эта CMS - мощная и грамотная система управления. Надеюсь, что наше сотрудничество затянется надолго! Спасибо!!!</strong>
-                        </div>
-                        <div class="slidertext_names">
-                            <strong>С уважением, Наталья Сушкова руководитель Отдела веб-проектов Группы компаний «Си Эль парфюм»<br>
-                            <a href="http://www.cielparfum.com/">www.cielparfum.com</a></strong>
-                        </div>
-                    </div>
+        <!-- 9. reviews -->
+
+        <section id="reviews">              
+            <div class="container3">
+                <div class="text-slider">
+                    <h1>Отзывы</h1>
+                    <div class="container">
+                        <div class="txts">
+                            <div class="row txts1">
+                                <div class="rero1">
+                                    <div class="a" style="overflow: hidden; transition: 0.5s">
+                                        <div class="aa">
+                                            <div class="">
+                                                <img src="review2.png" />
                     
-                    <!-- Отзыв 2 -->
-                    <div class="review-item">
-                        <div class="review-header">
-                            <img src="review1.png" alt="Отзыв Сергея Чепурко" class="review-logo" />
-                            <div class="review-title">
-                                <div class="review-company">PERSONAL-WRITER</div>
-                                <div class="review-website">writers-united.org</div>
-                            </div>
-                        </div>
-                        <div class="slidertext_text">
-                            <strong>Сергей — профессиональный, высококвалифицированый программист с огромным опытом в ИТ. Я долгое время общался с топ-фрилансерами (вся первая двадцатка) на веблансере и могу сказать, что С СЕРГЕЕМ ОНИ И РЯДОМ НЕ ВАЛЯЛИСЬ. Работаем с Сергеем до сих пор. С ним приятно работать, я доволен.</strong>
-                        </div>
-                        <div class="slidertext_names">
-                            <strong>Сергей Чепурко, руководитель проекта<br>
-                            <a href="http://www.personal-writer.com/">www.personal-writer.com</a></strong>
-                        </div>
-                    </div>
+                                                <div class="pt-3 slidertext_text">
+                                                    Долгие поиски единственного и неповторимого мастера
+                                                    на многострадальный сайт www.cielparfum.com, который
+                                                    был собран крайне некомпетентным программистом и раз
+                                                    в месяц стабильно грозил погибнуть, привели меня на
+                                                    сайт и, в итоге, к ребятам из Drupal-coder. И вот
+                                                    уже практически полгода как не проходит и дня, чтобы
+                                                    я не поудивлялась и не порадовалась своему везению!
+                                                    Починили все, что не работало - от поиска до
+                                                    отображения меню. Провели редизайн - не отходя от
+                                                    желаемого, но со своими существенными и
+                                                    качественными дополнениями. Осуществили ряд проектов
+                                                    - конкурсы, тесты и тд. А уж мелких починок и
+                                                    доработок - не счесть! И главное - все качественно и
+                                                    быстро (не взирая на не самый "быстрый" тариф). Есть
+                                                    вопросы - замечательный Алексей всегда подскажет,
+                                                    поддержит, отремонтирует и/или просто сделает с
+                                                    нуля. Есть задумка для реализации - замечательный
+                                                    Сергей обсудит и предложит идеальный вариант. Есть
+                                                    проблема - замечательные Надежда и Роман починят,
+                                                    поправят, сделают! Ребята доказали, что эта CMS -
+                                                    мощная и грамотная система управления. Надеюсь, что
+                                                    наше сотрудничество затянется надолго! Спасибо!!!
+                                                </div>
+
+                                                <div class="slidertext_names">
+                                                    С уважением, Наталья Сушкова руководитель Отдела веб-проектов Группы компаний «Си Эль парфюм»&nbsp;<a href="http://www.cielparfum.com/">http://www.cielparfum.com/</a>
+                                                </div>
+                                            </div>
                     
-                    <!-- Отзыв 3 -->
-                    <div class="review-item">
-                        <div class="review-header">
-                            <img src="review3.jpg" alt="Отзыв Леонида Ледовского" class="review-logo" />
-                            <div class="review-title">
-                                <div class="review-company">INITLAB</div>
-                                <div class="review-website">отзыв клиента</div>
-                            </div>
-                        </div>
-                        <div class="slidertext_text">
-                            <strong>Выражаю глубочайшую благодарность команде специалистов компании "Инитлаб" и лично Дмитрию Купянскому и Алексею Синице. Сайт был первоклассно перевёрстан из старой табличной модели в новую на базе Drupal с дополнительной функциональностью. Всё было сделано с высочайшим качеством и точно в сроки. Всем кому хочется без нервов и лишних вопросов разработать сайт рекомендую обращаться именно к этой команде профессионалов.</strong>
-                        </div>
-                        <div class="slidertext_names">
-                            <strong>Леонид Александрович Ледовский</strong>
-                        </div>
-                    </div>
+                                            <div class="">
+                                                <img src="review1.png" />
                     
-                    <!-- Отзыв 4 -->
-                    <div class="review-item">
-                        <div class="review-header">
-                            <img src="review4.png" alt="Отзыв Надежды Сикорской" class="review-logo" />
-                            <div class="review-title">
-                                <div class="review-company">NASHAGAZETA</div>
-                                <div class="review-website">nashagazeta.ch</div>
-                            </div>
-                        </div>
-                        <div class="slidertext_text">
-                            <strong>Моя электронная газета www.nashagazeta.ch существует в Швейцарии уже 10 лет. За это время мы сменили 7 специалистов по техподдержке, и только сейчас, в последние несколько месяцев, с начала сотрудничества с Алексеем Синицей и его командой, я впервые почувствовала, что у меня есть надежный технический тыл. Без громких слов и обещаний, ребята просто спокойно и качественно делают работу, быстро реагируют, находят решения, предлагают конкретные варианты улучшения функционирования сайта и сами их оперативно осуществляют. Сотрудничество с ними – одно удовольствие!</strong>
-                        </div>
-                        <div class="slidertext_names">
-                            <strong>Надежда Сикорская, Женева, Швейцария</strong>
-                        </div>
-                    </div>
+                                                <div class="pt-3 slidertext_text">
+                                                Сергей — профессиональный, высококвалифицированый
+                                                программист с огромным опытом в ИТ. Я долгое время
+                                                общался с топ-фрилансерами (вся первая двадцатка) на
+                                                веблансере и могу сказать, что С СЕРГЕЕМ ОНИ И РЯДОМ
+                                                НЕ ВАЛЯЛИСЬ. Работаем с Сергеем до сих пор. С ним
+                                                приятно работать, я доволен.
+                                                </div>
+
+                                                <div class="slidertext_names">
+                                                    Сергей Чепурко, руководитель проекта&nbsp;<a href="http://www.personal-writer.com/">www.personal-writer.com</a>&nbsp;/&nbsp;<a href="http://www.writers-united.org/">www.writers-united.org</a>
+                                                </div>
+                                            </div>
                     
-                    <!-- Отзыв 5 -->
-                    <div class="review-item">
-                        <div class="review-header">
-                            <img src="review5.png" alt="Отзыв Кузина Вадима" class="review-logo" />
-                            <div class="review-title">
-                                <div class="review-company">ESTEE DESIGN</div>
-                                <div class="review-website">estee-design.ru</div>
-                            </div>
-                        </div>
-                        <div class="slidertext_text">
-                            <strong>Наша компания Estee Design занимается дизайном интерьеров. Сайт сверстан на Drupal. Искали программистов под выполнение ряда небольших изменений и корректировок по сайту. Пообщавшись с Алексеем Синицей, приняли решение о начале работ с компанией Initlab/drupal-coder. Сотрудничеством довольны на 100%. Четкая и понятная система коммуникации, достаточно оперативное решение по задачам. Дали рекомендации по улучшению програмной части сайта, исправили ряд скрытых ошибок. Никогда не пишу отзывы (нет времени), но в данном случае, по просьбе Алексея, не могу не рекомендовать Initlab другим людям - действительно компания профессионалов.</strong>
-                        </div>
-                        <div class="slidertext_names">
-                            <strong>Кузин Вадим, руководитель строительного направления Дизайн-бюро интерьеров Estee<br>
-                            <a href="http://estee-design.ru">estee-design.ru</a></strong>
-                        </div>
-                    </div>
+                                            <div class="">
+                                                <img src="review3.jpg" />
                     
-                    <!-- Отзыв 6 -->
-                    <div class="review-item">
-                        <div class="review-header">
-                            <img src="review6.png" alt="Отзыв Константина Бельского" class="review-logo" />
-                            <div class="review-title">
-                                <div class="review-company">CABLEMAN</div>
-                                <div class="review-website">cableman.ru</div>
-                            </div>
-                        </div>
-                        <div class="slidertext_text">
-                            <strong>Наша компания за несколько лет сменила несколько команд программистов и специалистов техподдержки, и почти отчаялась найти на российском рынке адекватное профессиональное предложение по разумной цене. Пока мы не начали работать с командой "Инитлаб", воплощающей в себе все наши представления о нормальной системе взаимодействия в сочетании с профессиональным неравнодушием. Впервые в моей деловой практике я чувствую надежно прикрытыми важнейшие задачи в жизни электронного СМИ, при том, что мои коллеги работают за сотни километров от нас и мы никогда не встречались лично.</strong>
-                        </div>
-                        <div class="slidertext_names">
-                            <strong>Константин Бельский, зам. генерального директора портала<br>
-                            <a href="http://www.cableman.ru/">www.cableman.ru</a></strong>
-                        </div>
-                    </div>
+                                                <div class="pt-3 slidertext_text">
+                                                Выражаю глубочайшую благодарность команде
+                                                специалистов компании "Инитлаб" и лично Дмитрию
+                                                Купянскому и Алексею Синице. Сайт был первоклассно
+                                                перевёрстан из старой табличной модели в новую на
+                                                базе Drupal с дополнительной функциональностью. Всё
+                                                было сделано с высочайшим качеством и точно в сроки.
+                                                Всем кому хочется без нервов и лишних вопросов
+                                                разработать сайт рекомендую обращаться именно к этой
+                                                команде профессионалов.
+                                                </div>
+
+                                                <div class="slidertext_names">
+                                                    Леонид Александрович Ледовский
+                                                </div>
+                                            </div>
                     
-                    <!-- Отзыв 7 -->
-                    <div class="review-item">
-                        <div class="review-header">
-                            <img src="review7.png" alt="Отзыв Владислава" class="review-logo" />
-                            <div class="review-title">
-                                <div class="review-company">SEREBRO</div>
-                                <div class="review-website">serebro.ag</div>
-                            </div>
-                        </div>
-                        <div class="slidertext_text">
-                            <strong>За довольно продолжительный срок (2014 - 2016 годы) весьма плотной работы (интернет-магазин на безумно замороченном Drupal 6: устраняли косяки разработчиков, ускоряли сайт, сделали множество новых функций и т.п.) - только самые добрые эмоции от работы с командой Initlab / Drupal-coder: всегда можно рассчитывать на быструю и толковую помощь, поддержку, совет. Даже сейчас, не смотря на то, что мы почти год не работали на постоянной основе (банально закончились задачи), случайно возникшая проблема с сайтом была решена мгновенно! В общем, только самые искренние благодарности и рекомендации! Спасибо!</strong>
-                        </div>
-                        <div class="slidertext_names">
-                            <strong>С уважением, Владислав<br>
-                            <a href="http://serebro.ag">serebro.ag</a></strong>
-                        </div>
-                    </div>
+                                            <div class="">
+                                                <img src="review4.png" />
                     
-                    <!-- Отзыв 8 -->
-                    <div class="review-item">
-                        <div class="review-header">
-                            <img src="review8.jpg" alt="Отзыв Дмитрия Новикова" class="review-logo" />
-                            <div class="review-title">
-                                <div class="review-company">LPCMA</div>
-                                <div class="review-website">lpcma.tsu.ru</div>
+                                                <div class="pt-3 slidertext_text">
+                                                Моя электронная газета www.nashagazeta.ch существует
+                                                в Швейцарии уже 10 лет. За это время мы сменили 7
+                                                специалистов по техподдержке, и только сейчас, в
+                                                последние несколько месяцев, с начала сотрудничества
+                                                с Алексеем Синицей и его командой, я впервые
+                                                почувствовала, что у меня есть надежный технический
+                                                тыл. Без громких слов и обещаний, ребята просто
+                                                спокойно и качественно делают работу, быстро
+                                                реагируют, находят решения, предлагают конкретные
+                                                варианты улучшения функционирования сайта и сами их
+                                                оперативно осуществляют. Сотрудничество с ними –
+                                                одно удовольствие!
+                                                </div>
+
+                                                <div class="slidertext_names">
+                                                    Надежда Сикорская, Женева, Швейцария
+                                                </div>
+                                            </div>
+                    
+                                            <div class="">
+                                                <img src="review5.png" />
+                    
+                                                <div class="pt-3 slidertext_text">
+                                                Наша компания Estee Design занимается дизайном
+                                                интерьеров. Сайт сверстан на Drupal. Искали
+                                                программистов под выполнение ряда небольших
+                                                изменений и корректировок по сайту. Пообщавшись с
+                                                Алексеем Синицей, приняли решение о начале работ с
+                                                компанией Initlab/drupal-coder. Сотрудничеством
+                                                довольны на 100%. Четкая и понятная система
+                                                коммуникации, достаточно оперативное решение по
+                                                задачам. Дали рекомендации по улучшению програмной
+                                                части сайта, исправили ряд скрытых ошибок. Никогда
+                                                не пишу отзывы (нет времени), но в данном случае, по
+                                                просьбе Алексея, не могу не рекомендовать Initlab
+                                                другим людям - действительно компания
+                                                профессионалов.
+                                                </div>
+
+                                                <div class="slidertext_names">
+                                                    Кузин Вадим, руководитель строительного направления Дизайн-бюро интерьеров Estee <a href="http://estee-design.ru">estee-design.ru</a>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="">
+                                                <img src="review6.png" />
+                    
+                                                <div class="pt-3 slidertext_text">
+                                                Наша компания за несколько лет сменила несколько
+                                                команд программистов и специалистов техподдержки, и
+                                                почти отчаялась найти на российском рынке адекватное
+                                                профессиональное предложение по разумной цене. Пока
+                                                мы не начали работать с командой "Инитлаб",
+                                                воплощающей в себе все наши представления о
+                                                нормальной системе взаимодействия в сочетании с
+                                                профессиональным неравнодушием. Впервые в моей
+                                                деловой практике я чувствую надежно прикрытыми
+                                                важнейшие задачи в жизни электронного СМИ, при том,
+                                                что мои коллеги работают за сотни километров от нас
+                                                и мы никогда не встречались лично.
+                                                </div>
+
+                                                <div class="slidertext_names">
+                                                    Константин Бельский, зам. генерального директора портала <a href="http://www.cableman.ru/">Кабельщик.ру</a>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="">
+                                                <img src="review7.png" />
+                    
+                                                <div class="pt-3 slidertext_text">
+                                                За довольно продолжительный срок (2014 - 2016 годы)
+                                                весьма плотной работы (интернет-магазин на безумно
+                                                замороченном Drupal 6: устраняли косяки
+                                                разработчиков, ускоряли сайт, сделали множество
+                                                новых функций и т.п.) - только самые добрые эмоции
+                                                от работы с командой Initlab / Drupal-coder: всегда
+                                                можно рассчитывать на быструю и толковую помощь,
+                                                поддержку, совет. Даже сейчас, не смотря на то, что
+                                                мы почти год не работали на постоянной основе
+                                                (банально закончились задачи), случайно возникшая
+                                                проблема с сайтом была решена мгновенно! В общем,
+                                                только самые искренние благодарности и рекомендации!
+                                                Спасибо!
+                                                </div>
+
+                                                <div class="slidertext_names">
+                                                    С уважением, Владислав, <a href="http://serebro.ag">Serebro.Ag</a>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="">
+                                                <img src="review8.jpg" />
+                    
+                                                <div class="pt-3 slidertext_text">
+                                                Хотел поблагодарить за работу над нашими сайтами. За
+                                                4 месяца работы привели сайт в порядок, а самое
+                                                главное получили инструмент, с помощью мы теперь
+                                                можем быстро и красиво выставлять контент для
+                                                образования и работы с предприятиями
+                                                http://lpcma.tsu.ru/ru/post/reference_material
+                                                </div>
+
+                                                <div class="slidertext_names">
+                                                    Дмитрий Новиков, <a href="http://lpcma.tsu.ru">lpcma.tsu.ru</a>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row_review_btns">
+                                    <div class="review_btns">
+                                        <div class="button_slide">
+                                        <button class="b1 b11">
+                                            <img src="arrow-left.svg" alt="arrow-left" />
+                                        </button>
+                
+                                        <div class="review_nums ednum">01</div>
+                                        <div class="review_nums rwns">/</div>
+                                        <div class="review_nums">08</div>
+                
+                                        <button class="b2 b22">
+                                            <img src="arrow-right.svg" alt="arrow-right" />
+                                        </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slidertext_text">
-                            <strong>Хотел поблагодарить за работу над нашими сайтами. За 4 месяца работы привели сайт в порядок, а самое главное получили инструмент, с помощью мы теперь можем быстро и красиво выставлять контент для образования и работы с предприятиями http://lpcma.tsu.ru/ru/post/reference_material</strong>
-                        </div>
-                        <div class="slidertext_names">
-                            <strong>Дмитрий Новиков<br>
-                            <a href="http://lpcma.tsu.ru">lpcma.tsu.ru</a></strong>
+                            <div class="review_bg"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="review-navigation">
-                <button class="review-prev">
-                    <img src="arrow-left.svg" alt="Предыдущий отзыв" class="arrow-icon" />
-                </button>
-                <div class="review-counter">
-                    <span class="current-review">01</span>
-                    <span class="separator">/</span>
-                    <span class="total-reviews">08</span>
-                </div>
-                <button class="review-next">
-                    <img src="arrow-right.svg" alt="Следующий отзыв" class="arrow-icon" />
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<style>
-/* Стили для отзывов как на изображении */
-#reviews {
-    position: relative;
-    background: #f8f9fa;
-    padding: 60px 0;
-}
-
-.review-container {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    padding: 40px;
-    min-height: 500px;
-}
-
-.review-slider {
-    position: relative;
-}
-
-.review-item {
-    display: none;
-    animation: fadeIn 0.5s ease;
-}
-
-.review-item.active {
-    display: block;
-}
-
-.review-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 20px;
-}
-
-.review-logo {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin-right: 20px;
-    /* Убираем круглую рамку */
-    border: none;
-    border-radius: 0;
-}
-
-.review-title {
-    flex-grow: 1;
-}
-
-.review-company {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-}
-
-.review-website {
-    font-size: 18px;
-    color: #666;
-    letter-spacing: 2px;
-    text-transform: lowercase;
-}
-
-.slidertext_text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 25px;
-    text-align: justify;
-}
-
-.slidertext_text strong {
-    font-weight: 700;
-}
-
-.slidertext_names {
-    font-size: 14px;
-    color: #666;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-
-.slidertext_names strong {
-    font-weight: 700;
-}
-
-.slidertext_names a {
-    color: #4a90e2;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.slidertext_names a:hover {
-    text-decoration: underline;
-}
-
-.review-navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    gap: 20px;
-}
-
-.review-prev, .review-next {
-    background: transparent;
-    border: none;
-    width: auto;
-    height: auto;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-.review-prev:hover, .review-next:hover {
-    opacity: 0.7;
-}
-
-.arrow-icon {
-    width: 40px;
-    height: 40px;
-    /* Черные стрелки */
-    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
-}
-
-.review-counter {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-.current-review {
-    color: #ff0000; /* Красный цвет для текущего номера */
-    font-weight: bold;
-}
-
-.separator {
-    margin: 0 5px;
-    color: #333;
-}
-
-.total-reviews {
-    color: #333;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-</style>
-
-<script>
-// JavaScript для переключения отзывов
-document.addEventListener('DOMContentLoaded', function() {
-    const reviewItems = document.querySelectorAll('.review-item');
-    const prevButton = document.querySelector('.review-prev');
-    const nextButton = document.querySelector('.review-next');
-    const currentReviewSpan = document.querySelector('.current-review');
-    const totalReviewsSpan = document.querySelector('.total-reviews');
-    
-    let currentIndex = 0;
-    const totalReviews = reviewItems.length;
-    
-    // Установить общее количество отзывов
-    totalReviewsSpan.textContent = totalReviews.toString().padStart(2, '0');
-    
-    // Функция для показа отзыва по индексу
-    function showReview(index) {
-        // Скрыть все отзывы
-        reviewItems.forEach(item => {
-            item.classList.remove('active');
-        });
-        
-        // Показать выбранный отзыв
-        reviewItems[index].classList.add('active');
-        
-        // Обновить счетчик
-        currentReviewSpan.textContent = (index + 1).toString().padStart(2, '0');
-        currentIndex = index;
-    }
-    
-    // Показать первый отзыв при загрузке
-    showReview(0);
-    
-    // Обработчик для кнопки "следующий"
-    nextButton.addEventListener('click', function() {
-        let nextIndex = currentIndex + 1;
-        if (nextIndex >= totalReviews) {
-            nextIndex = 0; // Вернуться к первому отзыву
-        }
-        showReview(nextIndex);
-    });
-    
-    // Обработчик для кнопки "предыдущий"
-    prevButton.addEventListener('click', function() {
-        let prevIndex = currentIndex - 1;
-        if (prevIndex < 0) {
-            prevIndex = totalReviews - 1; // Перейти к последнему отзыву
-        }
-        showReview(prevIndex);
-    });
-});
-</script>
         <!-- 10. partners -->
-<section id="partners">
-    <div class="container">
-        <h1>С нами работают</h1>
-        <h2>Десятки компаний доверяют нам самое ценное, что у них есть в интернете – свои сайты. Мы делаем всё, чтобы наше сотрудничество было долгим.</h2>
-        
-        <div class="partners-grid">
-            <div class="partner-card">
-                <div class="partner-logo-container">
-                    <img src="partner1.svg" alt="" class="partner-logo">
+
+        <section id="partners">
+            <div class="container">
+                <h1>С нами работают</h1>
+                <h2>Десятки компаний доверяют нам самое ценное, что у них есть в интернете – свои сайты. Мы делаем всё, чтобы наше сотрудничество было долгим.</h2>
+            </div>
+            <div id="companies">
+                <div class="slick autoplay">
+                    <div class="partner">
+                        <img src="partner1.svg" alt="">
+                    </div>
+                    <div class="partner">
+                        <img src="partner2.svg" alt="">
+                    </div>
+                    <div class="partner">
+                        <img src="partner3.svg" alt="">
+                    </div>
+                </div>
+                <div class="slick autoplay2">
+                    <div class="partner">
+                        <img src="partner1.svg" alt="">
+                    </div>
+                    <div class="partner">
+                        <img src="partner2.svg" alt="">
+                    </div>
+                    <div class="partner">
+                        <img src="partner3.svg" alt="">
+                    </div>
                 </div>
             </div>
-            
-            <div class="partner-card">
-                <div class="partner-logo-container">
-                    <img src="partner2.svg" alt="" class="partner-logo">
-                </div>
-            </div>
-            
-            <div class="partner-card">
-                <div class="partner-logo-container">
-                    <img src="partner3.svg" alt="" class="partner-logo">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-#partners {
-    padding: 60px 0;
-    background: #f8f9fa;
-    text-align: center;
-}
-
-#partners h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-#partners h2 {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 50px;
-    line-height: 1.5;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: normal;
-}
-
-.partners-grid {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.partner-card {
-    flex: 0 0 auto;
-    padding: 20px 15px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.partner-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.partner-logo-container {
-    width: 180px;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-}
-
-.partner-logo {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.8;
-    transition: all 0.3s ease;
-}
-
-.partner-card:hover .partner-logo {
-    filter: grayscale(0%);
-    opacity: 1;
-}
-
-@media (max-width: 768px) {
-    .partner-logo-container {
-        width: 140px;
-        height: 140px;
-        padding: 15px;
-    }
-    
-    .partners-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
-    .partner-card {
-        width: 80%;
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    .partner-logo-container {
-        width: 100px;
-        height: 100px;
-        padding: 10px;
-    }
-    
-    .partner-card {
-        width: 90%;
-    }
-}
-</style>
-        
-        
-     
-        
-        
-     
+        </section>
 
         <!-- 11. FAQ -->
 
@@ -1188,10 +856,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <textarea name="message" id="message" class="form_input" placeholder="Ваш комментарий"></textarea>
                 </div>
                 <div>
-                    <label class="checkbox-label">
+                    <label>
                         <input type="checkbox" name="oznakomlen" id="oznakomlen">
-                        <span class="checkbox-custom"></span>
-                        <span class="checkbox-text">Отправляя заявку, я даю согласие на <a href="">обработку своих персональных данных</a></span>
+                        <div></div>
+                        <span>Отправляя заявку, я даю согласие на <a href="">обработку своих персональных данных</a></span>
                     </label>
                 </div>
                 <div data-theme="dark" class="g-recaptcha" data-sitekey="6LeLxjIpAAAAAMWW79_2pMO4P4o9W6NKWZZHo_sz"></div>
