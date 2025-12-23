@@ -102,33 +102,7 @@ window.onload = function () {
         $(this).addClass('active');
     });
   };
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img');
-    
-    images.forEach(img => {
-        // Проверяем, загрузилось ли изображение
-        if (!img.complete || img.naturalHeight === 0) {
-            console.warn('Изображение не загружено:', img.src);
-            
-            // Добавляем класс для стилизации
-            img.classList.add('image-error');
-            
-            // Можно показать placeholder
-            img.onerror = function() {
-                this.style.border = '2px dashed #ccc';
-                this.style.padding = '10px';
-                console.log('Ошибка загрузки:', this.src);
-            };
-        }
-    });
-    
-    // Проверка конкретных изображений партнеров
-    const partnerLogos = document.querySelectorAll('.partner-logo');
-    partnerLogos.forEach(logo => {
-        if (!logo.src) {
-            console.error('Логотип партнера не имеет src:', logo);
-            logo.style.backgroundColor = '#f0f0f0';
-            logo.style.border = '1px solid #ddd';
-        }
+
+
     });
 });
