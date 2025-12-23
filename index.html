@@ -955,7 +955,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
         <!-- 10. partners -->
 <!-- 10. partners -->
-<!-- 10. partners -->
 <section id="partners">
     <div class="container">
         <h1>С нами работают</h1>
@@ -970,43 +969,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             <div class="partner-card">
                 <div class="partner-logo-container">
-                    <img src="partner3.svg" alt="" class="partner-logo">
-                </div>
-            </div>
-            
-            <div class="partner-card">
-                <div class="partner-logo-container">
                     <img src="partner2.svg" alt="" class="partner-logo">
                 </div>
             </div>
             
             <div class="partner-card">
                 <div class="partner-logo-container">
-                    <img src="partner4.svg" alt="" class="partner-logo">
-                </div>
-            </div>
-            
-            <div class="partner-card">
-                <div class="partner-logo-container">
-                    <img src="partner5.svg" alt="" class="partner-logo">
-                </div>
-            </div>
-            
-            <div class="partner-card">
-                <div class="partner-logo-container">
-                    <img src="partner6.svg" alt="" class="partner-logo">
-                </div>
-            </div>
-            
-            <div class="partner-card">
-                <div class="partner-logo-container">
-                    <img src="partner7.svg" alt="" class="partner-logo">
-                </div>
-            </div>
-            
-            <div class="partner-card">
-                <div class="partner-logo-container">
-                    <img src="partner8.svg" alt="" class="partner-logo">
+                    <img src="partner3.svg" alt="" class="partner-logo">
                 </div>
             </div>
         </div>
@@ -1040,7 +1009,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .partners-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
     max-width: 1200px;
@@ -1048,8 +1016,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .partner-card {
-    flex: 0 0 calc(12.5% - 25px);
-    min-width: 140px;
+    flex: 0 0 auto;
     padding: 20px 15px;
     background: white;
     border-radius: 10px;
@@ -1067,8 +1034,8 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .partner-logo-container {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1091,43 +1058,27 @@ document.addEventListener('DOMContentLoaded', function() {
     opacity: 1;
 }
 
-@media (max-width: 1200px) {
-    .partner-card {
-        flex: 0 0 calc(16.666% - 25px);
-    }
-}
-
-@media (max-width: 992px) {
-    .partner-card {
-        flex: 0 0 calc(20% - 25px);
-    }
-}
-
 @media (max-width: 768px) {
-    .partner-card {
-        flex: 0 0 calc(25% - 25px);
-    }
-}
-
-@media (max-width: 576px) {
-    .partner-card {
-        flex: 0 0 calc(33.333% - 25px);
+    .partners-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
     
-    .partners-grid {
-        gap: 15px;
+    .partner-card {
+        width: 80%;
+        max-width: 300px;
     }
 }
 
 @media (max-width: 480px) {
     .partner-card {
-        flex: 0 0 calc(50% - 15px);
-        min-width: 120px;
-        padding: 15px 10px;
+        width: 90%;
     }
-.partner-logo-container {
-        width: 50px;
-        height: 50px;
+    
+    .partner-logo-container {
+        width: 80px;
+        height: 80px;
     }
 }
 </style>
