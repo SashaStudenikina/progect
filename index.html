@@ -954,7 +954,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
         <!-- 10. partners -->
-<!-- 10. partners -->
 <section id="partners">
     <div class="container">
         <h1>С нами работают</h1>
@@ -1034,19 +1033,19 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .partner-logo-container {
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: white;
     border-radius: 8px;
-    padding: 5px;
+    padding: 20px;
 }
 
 .partner-logo {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90%;
+    max-height: 90%;
     object-fit: contain;
     filter: grayscale(100%);
     opacity: 0.8;
@@ -1059,6 +1058,12 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 @media (max-width: 768px) {
+    .partner-logo-container {
+        width: 140px;
+        height: 140px;
+        padding: 15px;
+    }
+    
     .partners-grid {
         flex-direction: column;
         align-items: center;
@@ -1072,65 +1077,14 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 @media (max-width: 480px) {
+    .partner-logo-container {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+    
     .partner-card {
         width: 90%;
-    }
-    
-    .partner-logo-container {
-        width: 80px;
-        height: 80px;
-    }
-}
-
-
-/* Адаптивность для разных экранов */
-@media (max-width: 1200px) {
-    .partner-card {
-        flex: 0 0 calc(16.666% - 25px);
-    }
-}
-
-@media (max-width: 992px) {
-    .partner-card {
-        flex: 0 0 calc(20% - 25px);
-    }
-}
-
-@media (max-width: 768px) {
-    .partner-card {
-        flex: 0 0 calc(25% - 25px);
-    }
-}
-
-@media (max-width: 576px) {
-    .partner-card {
-        flex: 0 0 calc(33.333% - 25px);
-    }
-    
-    .partners-grid {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .partner-card {
-        flex: 0 0 calc(50% - 15px);
-        min-width: 120px;
-        padding: 15px 10px;
-    }
-    
-    .partner-logo-container {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 10px;
-    }
-    
-    .partner-title {
-        font-size: 12px;
-    }
-    
-    .partner-subtitle {
-        font-size: 10px;
     }
 }
 </style>
@@ -1232,10 +1186,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <textarea name="message" id="message" class="form_input" placeholder="Ваш комментарий"></textarea>
                 </div>
                 <div>
-                    <label>
+                    <label class="checkbox-label">
                         <input type="checkbox" name="oznakomlen" id="oznakomlen">
-                        <div></div>
-                        <span>Отправляя заявку, я даю согласие на <a href="">обработку своих персональных данных</a></span>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Отправляя заявку, я даю согласие на <a href="">обработку своих персональных данных</a></span>
                     </label>
                 </div>
                 <div data-theme="dark" class="g-recaptcha" data-sitekey="6LeLxjIpAAAAAMWW79_2pMO4P4o9W6NKWZZHo_sz"></div>
@@ -1311,6 +1265,55 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     </script>
+    
+    <script>
+// Обработка чекбокса и формы
+document.addEventListener('DOMContentLoaded', function() {
+    const checkbox = document.getElementById('oznakomlen');
+    const submitBtn = document.getElementById('send');
+    const form = document.getElementById('form_send');
+    
+    // Функция обновления состояния кнопки
+    function updateSubmitButton() {
+        if (checkbox.checked) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+            submitBtn.style.cursor = 'pointer';
+        } else {
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.5';
+            submitBtn.style.cursor = 'not-allowed';
+        }
+    }
+    
+    // Инициализация при загрузке
+    updateSubmitButton();
+    
+    // Обновление при изменении чекбокса
+    checkbox.addEventListener('change', updateSubmitButton);
+    
+    // Проверка перед отправкой формы
+    form.addEventListener('submit', function(e) {
+        // Проверка чекбокса
+        if (!checkbox.checked) {
+            e.preventDefault();
+            alert('Пожалуйста, отметьте согласие на обработку персональных данных');
+            return false;
+        }
+        
+        // Проверка reCAPTCHA
+        const response = grecaptcha.getResponse();
+        if (response.length === 0) {
+            e.preventDefault();
+            alert('Пожалуйста, подтвердите, что вы не робот');
+            return false;
+        }
+        
+        return true;
+    });
+});
+</script>
+
     <script src="script.js"></script>
     <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -1339,5 +1342,58 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<style>
+/* Стили для чекбокса */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+}
+
+.checkbox-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.checkbox-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.checkbox-text a:hover {
+    text-decoration: underline;
+}
+</style>
 </body>
 </html>
