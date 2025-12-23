@@ -1302,15 +1302,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Проверка reCAPTCHA
-        const response = grecaptcha.getResponse();
-        if (response.length === 0) {
-            e.preventDefault();
-            alert('Пожалуйста, подтвердите, что вы не робот');
-            return false;
-        }
-        
-        return true;
-    });
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+<div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>);
 });
 </script>
 
