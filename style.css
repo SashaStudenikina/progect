@@ -11,13 +11,13 @@ video head, header_back_img, container, menus, mobile_head_menu, logo_a, logo, b
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    src: url(fonts/Montserrat-Medium.ttf);
+    src: url(Montserrat-Medium.ttf);
 }
 @font-face{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    src: url(fonts/Montserrat-Bold.ttf);
+    src: url(Montserrat-Bold.ttf);
 }
 ::-webkit-scrollbar{
     width: 9px;
@@ -159,7 +159,7 @@ button:hover{
     font-size: 48px !important;
 }
 .header_zag_big:after{
-    content: url(imgs/cup.png);
+    content: url(cup.png);
     position: relative;
     right: 0;
     top: 0;
@@ -431,7 +431,7 @@ nav li{
 #tarif{
     padding-top: 60px;
     padding-bottom: 51px;
-    background: url(imgs/D-background.svg) no-repeat top right;
+    background: url(D-background.svg) no-repeat top right;
     background-size: cover;
 }
 .tarif_category{
@@ -472,7 +472,7 @@ nav li{
     position: relative;
 }
 .tarif_item:before{
-    content: url(imgs/check.svg);
+    content: url(check.svg);
     width: 13px;
     position: absolute;
     left: -31px;
@@ -775,7 +775,7 @@ span{
 }
 
 .text-slider:before{
-    content: url(img/right-quote-sign.svg);
+    content: url(right-quote-sign.svg);
     position: absolute;
     top: -10px;
     left: 0;
@@ -1005,11 +1005,11 @@ span{
     transform: translateY(-50%);
 }
 .form_phone:before{
-    content: url(imgs/phone.svg);
+    content: url(phone.svg);
     width: 24px;
 }
 .form_mail:before{
-    content: url(imgs/mail.svg);
+    content: url(mail.svg);
     width: 28px;
 }
 
