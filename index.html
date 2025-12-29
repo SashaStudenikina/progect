@@ -1158,46 +1158,54 @@ document.addEventListener('DOMContentLoaded', function() {
         </section>
     </main>
 
+<!-- 12. FORM -->
+<footer id="form">
+    <div class="container">
+        <div class="form_contacts">
+            <h1>Оставить заявку на<br> поддержку сайта</h1>
+            <h2>Срочно нужна поддержка сайта? Ваша команда не успевает справиться самостоятельно или предыдущий подрядчик не справился с работой? Тогда вам точно к нам! Просто оставьте заявку и наш менеджер с вами свяжется!</h2>
 
-    <!-- 12. FORM -->
-    <footer id="form">
-        <div class="container">
-            <div class="form_contacts">
-                <h1>Оставить заявку на<br> поддержку сайта</h1>
-                <h2>Срочно нужна поддержка сайта? Ваша команда не успевает справиться самостоятельно или предыдущий подрядчик не справился с работой? Тогда вам точно к нам! Просто оставьте заявку и наш менеджер с вами свяжется!</h2>
-
-                <div class="form_contact">
-                    <div class="form_phone"><a href="tel:+78002222673">8 800 222-26-73</a></div>
-                    <div class="form_mail"><a href="mailto:info@drupal-coder.ru">info@drupal-coder.ru</a></div>
-                </div>
+            <div class="form_contact">
+                <div class="form_phone"><a href="tel:+78002222673">8 800 222-26-73</a></div>
+                <div class="form_mail"><a href="mailto:info@drupal-coder.ru">info@drupal-coder.ru</a></div>
             </div>
-
-            <form action="" id="form_send">
-                <h4 id="status"></h4>
-                <div>
-                    <input type="text" name="name" id="name" class="form_input" placeholder="Ваше имя">
-                </div>
-                <div>
-                    <input type="tel" name="phone" id="phone" class="form_input" placeholder="Телефон">
-                </div>
-                <div>
-                    <input type="email" name="email" id="email" class="form_input" placeholder="E-mail">
-                </div>
-                <div>
-                    <textarea name="message" id="message" class="form_input" placeholder="Ваш комментарий"></textarea>
-                </div>
-                <div>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="oznakomlen" id="oznakomlen">
-                        <span class="checkbox-custom"></span>
-                        <span class="checkbox-text">Отправляя заявку, я даю согласие на <a href="">обработку своих персональных данных</a></span>
-                    </label>
-                </div>
-                <div data-theme="dark" class="g-recaptcha" data-sitekey="6LeLxjIpAAAAAMWW79_2pMO4P4o9W6NKWZZHo_sz"></div>
-                <button id="send" class="btn_send button_select" type="submit">СВЯЖИТЕСЬ С НАМИ</button>
-            </form>
         </div>
 
+        <form action="https://formspree.io/f/xvgebbey" method="POST" id="form_send">
+            <h4 id="status"></h4>
+            <div>
+                <input type="text" name="name" id="name" class="form_input" placeholder="Ваше имя" required>
+            </div>
+            <div>
+                <input type="tel" name="phone" id="phone" class="form_input" placeholder="Телефон" required>
+            </div>
+            <div>
+                <input type="email" name="email" id="email" class="form_input" placeholder="E-mail" required>
+            </div>
+            <div>
+                <textarea name="message" id="message" class="form_input" placeholder="Ваш комментарий" required></textarea>
+            </div>
+            
+            <!-- Добавляем скрытые поля для организации и темы -->
+            <input type="hidden" name="org" value="Заявка с сайта Drupal-coder">
+            <input type="hidden" name="_subject" value="Новая заявка на поддержку сайта">
+            
+            <div>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="agree" id="oznakomlen" required>
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-text">Отправляя заявку, я даю согласие на <a href="">обработку своих персональных данных</a></span>
+                </label>
+            </div>
+            
+            <!-- Убираем reCAPTCHA из формы, так как Formspree может не требовать его -->
+            <button id="send" class="btn_send button_select" type="submit">СВЯЖИТЕСЬ С НАМИ</button>
+            
+            <!-- Сообщение о статусе отправки -->
+            <div id="formMessage" style="display: none; margin-top: 15px; padding: 10px; border-radius: 5px;"></div>
+        </form>
+    </div>
+    </div>
         <!-- 13. FOOTER  -->
         <div class="razdel"></div>
         <div class="container">
@@ -1306,8 +1314,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
-<div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>);
-});
+<div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
 </script>
 
     <script src="script.js"></script>
@@ -1393,3 +1400,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </style>
 </body>
 </html>
+   
